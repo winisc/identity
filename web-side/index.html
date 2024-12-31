@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <head>
+        <!-- meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- libs/js -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+        <!-- modules -->
+        <script src="script.js"></script>
+        <!-- styles -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="background"></div>
+        <div id="identity">
+            <div class="card">
+                <div class="brand"></div>
+                <span class="title">CARTÃO DE IDENTIDADE</span>
+                <div class="footer">TRINITY ROLEPLAY</div>
+                <div class="photo">
+                    <img id="avatar" src="img/avatar.png" alt="Perfil" />  
+                </div>
+                <div class="infos">
+                    <div id="name" class="name">Wini Zin</div>
+                    <div id="idade">67 anos</div>
+                    <div class="phone"></div>
+                    <div class="flx">
+                        <div class="key">Passaporte</div>
+                        <div id="user" class="value">1138</div>
+                    </div>
+                    <div class="flx">
+                        <div class="key">Celular</div>
+                        <div id="celular" class="value">111111</div>
+                    </div>
+                    <div class="flx">
+                        <div class="key">Registro</div>
+                        <div id="registro" class="value">5AF617</div>
+                    </div>
+                </div>
+                <div class="close" onClick="closeIdentity()">
+                    <img src="img/close.png" alt="Fechar" />
+                </div>
+            </div>
+        </div>
+        <div id="identity-api"></div>
+        </div>
+    </body>
+</html>
+

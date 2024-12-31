@@ -1,0 +1,205 @@
+@font-face { font-family: 'thin'; src: url('fonts/thin.ttf') format('truetype'); }
+@font-face { font-family: 'regular'; src: url('fonts/regular.ttf') format('truetype'); }
+@font-face { font-family: 'bold'; src: url('fonts/bold.ttf') format('truetype'); }
+
+img {
+    pointer-events: none;
+}
+
+body {
+    font-family: 'bold';
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+/* Identities */
+.background {
+    position: fixed; /* Garante que o fundo ocupe a tela inteira */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo semitransparente */
+    filter: blur(12px); /* Ajuste o nível do desfoque conforme necessário */
+    opacity: 0.7; /* Deixa o fundo com aparência "pasmada" */
+    z-index: 1; /* Envia o fundo para trás */
+    display: none;
+}
+
+#identity {
+    z-index: 2; 
+    width: 60%;
+    position: absolute;
+    top: 72%;
+    left: 87%;
+    transform: translate(-50%,-15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 20vw;
+    height: 12vw;
+    background-color: rgb(241, 241, 241);
+    border-radius: 1vw;
+    border: solid 0.15vw rgb(48, 48, 48);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    animation: fadeContent ease .5s;
+    background-image: 
+        url('./img/background.png'); /* Gradiente sobre a imagem */
+    background-size: 80%; /* Define o tamanho da imagem em relação ao elemento */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; /* Mistura a imagem com o gradiente */
+}
+
+
+.card .brand {
+    height: 100%;
+    width: 10%;
+    background-color: #f5d222;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.card .title {
+    position: absolute;
+	padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: max-content;
+    top: 0%;
+    color: black;
+    font-size: .8vw;
+    letter-spacing: .05vw;
+}
+
+.card .footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: max-content;
+    bottom: 5%;
+    color: black;
+    font-size: .5vw;
+    font-family: thin;
+    letter-spacing: .1vw;
+}
+
+.card .photo {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7vw;
+    height: 7vw;
+    background-color: rgb(117, 117, 117);
+    border: solid .3vw #ceb120;
+    border-radius: 1vw;
+}
+
+.card .photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+}
+
+.card .infos {
+    margin-left: 6.5vw;
+    width: 48%;
+}
+
+.card .infos div {
+    color: black;
+}
+
+.card .infos div {
+    white-space: nowrap;                  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .7vw;
+    letter-spacing: .02vw;
+    font-family: thin;
+}
+
+.card .infos div.name {
+    font-size: .85vw;
+    font-family: bold;
+}
+
+.card .infos div.phone {
+    margin-top: .5vw;
+}
+
+.card .infos div.flx {
+    margin-bottom: .10vw;
+    display: flex;
+    align-items: center;
+}
+
+.card .infos div.flx .key {
+    font-size: .65vw;
+    font-family: bold;
+    width: 60%;
+    display: flex;
+}
+
+.card .infos div.flx .value {
+    font-size: .7vw;
+    width: 60%;
+    white-space: nowrap;                  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .close {
+    position: absolute;
+    top: .5vw;
+    right: .5vw;
+    width: .8vw;
+    height: .8vw;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.card .close img {
+    width: 100%;
+    height: 100%;
+}
+
+#identity-api {
+    width: 20vw;
+    position: absolute;
+    bottom: 25%;
+    right: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeContent {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeContentOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0); }
+}
