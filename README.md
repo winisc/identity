@@ -1,2 +1,2 @@
 # indentity
-Resource de identidade visual para jogador. Front e back end
+Visual identity resource for player. Front and back end
